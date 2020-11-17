@@ -29,8 +29,8 @@ class ProjectListAndFormView(SuccessMessageMixin, ListView, FormView):
         send_mail(
             cd['name'],
             cd['message'],
-            cd.get('email', 'noreply@example.com'),
-            ['vlad.moroshan@gmail.com'],
+            cd.get('email', 'sureshmumbai2017@@gmail.com'),
+            ['sureshmumbai2017@@gmail.com'],
             fail_silently=False
         )
         return super(ProjectListAndFormView, self).form_valid(form)

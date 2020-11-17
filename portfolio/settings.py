@@ -25,7 +25,7 @@ SECRET_KEY = '&cahwqh=j%ky27#js%9ji+^*fp))_b+n=rt2#ohhwt+$g4zaso'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS =  ['*']
+ALLOWED_HOSTS =  ['*', 'gitkp.azurewebsites.net']
 
 # Application definition
 
@@ -124,6 +124,6 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'staticfiles'),]
 # For sending emails
 EMAIL_USE_TLS = True 
 EMAIL_HOST ='smtp.gmail.com' 
-EMAIL_HOST_USER = 'your_email@gmail.com'
-EMAIL_HOST_PASSWORD = '*********'
+EMAIL_HOST_USER = 'sureshmumbai2017@gmail.com'
+EMAIL_HOST_PASSWORD = 'cclpxwyvqyunutnt'
 EMAIL_PORT = 587

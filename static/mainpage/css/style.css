@@ -166,7 +166,7 @@ h6 {
 }
 
 input:nth-child(3n){
-    height: 500px%;
+    height: 500px;
 }
 
 /* ---------------------------------------------- /*
@@ -709,8 +709,9 @@ div[class^="devicon"] span{
 
 .card {
 	padding: 0px 10px 0px 5px;
-	margin: 10px 30px 10px;
-	border: 1px solid lightgray;
+	border: transparent;
+	/* margin: 10px 30px 10px; */
+	/* border: 1px solid lightgray; */
 }
 
 .card-text {
@@ -752,6 +753,7 @@ div[class^="devicon"] span{
 .tools {
 	height: 60px;
 	display: inline-block;
+	width: max-content;
 }
 .tools > span {
 	display: inline-block;
