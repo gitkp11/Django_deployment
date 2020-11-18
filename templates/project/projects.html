@@ -1,5 +1,7 @@
+{% extends 'base.html' %}
 {% load static %}
 
+{% block content %}
 <!-- Portfolio start -->
 <section id="portfolio" class="pfblock">
 	<div class="container">
@@ -15,7 +17,7 @@
 		</div><!-- .row -->
 
 		<div class="row">
-			{% for project in list_projects|slice:":3" %}
+			{% for project in list_projects|slice:":" %}
 				<div class="card col-xs-12 col-sm-5 col-md-4 mx-0 px-1">
           <div class="grid wow zoomIn">
             <figure class="effect-bubba"><a href="{{ project.url }}" target="_blank">
@@ -36,11 +38,8 @@
         </div>
       {% endfor %}
     </div>
-
-    <div class="col-md-12 col-lg-12 calltoaction-btn wow slideInRight" data-wow-delay=".3s">
-      <a href="{% url 'mainpage:allprojects' %}" class="btn btn-lg-success">All Projects</a>
-    </div>
     
 	</div><!-- .contaier -->
 </section>
 <!-- Portfolio end -->
+{% endblock content %}
