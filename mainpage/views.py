@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
-from django.views.generic import ListView
+from django.views.generic import ListView, TemplateView
 from django.views.generic.edit import FormView
 from django.contrib.messages.views import SuccessMessageMixin
 
@@ -15,8 +15,8 @@ class ProjectListAndFormView(SuccessMessageMixin, ListView, FormView):
     model = Project # data from database
     # template_name = 'mainpage/main.html'
     template_name = 'base.html'
-    context_object_name = 'list_projects' # name of the var in html template
-    queryset = Project.objects.all().order_by("-pub_date")#  list of all projects
+    context_object_name = 'list_projects'   # name of the var in html template
+    queryset = Project.objects.all().order_by("-pub_date")  # list of all projects
     object_list = None
 
     form_class = ContactForm
@@ -35,3 +35,17 @@ class ProjectListAndFormView(SuccessMessageMixin, ListView, FormView):
             fail_silently=False
         )
         return super(ProjectListAndFormView, self).form_valid(form)
+
+
+class allProjectsView(TemplateView):
+    model = Project
+    template_name = 'project/projects.html'
+    context_object_name = 'list_projects'
+    queryset = Project.objects.all().order_by("-pub_date")
+    object_list = None
+
+    def get_context_data(self, **kwargs):
+        context = super(allProjectsView, self).get_context_data(**kwargs)
+        context['list_projects'] = Project.objects.all().order_by("-pub_date")
+        
+        return context

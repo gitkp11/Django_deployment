@@ -728,7 +728,8 @@ div[class^="devicon"] span{
 }
 
 .grid h2{
-	font-family: 'Montserrat', sans-serif;
+	font-stretch: condensed;
+	font-family: 'monospace', sans-serif;
     font-size: 20px;
     padding-top: 0;
     margin: 10px 0px;

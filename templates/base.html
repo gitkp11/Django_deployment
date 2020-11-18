@@ -42,16 +42,15 @@
 
     {% include 'header.html' %}
 	
-	{% block homeindex %}
-    {% endblock homeindex %}
-    
-	{% include 'mainpage/home.html' %}
-    {% include 'mainpage/services.html' %}
-    {% include 'mainpage/portfolio.html' %}
-    {% include 'mainpage/calltoaction.html' %}
-	{% include 'mainpage/contact.html' %}
-	
-    {% block content %}
+	{% block homeblock %}
+    {% endblock homeblock %}
+
+	{% block content %}
+		{% include 'mainpage/home.html' %}
+		{% include 'mainpage/services.html' %}
+		{% include 'mainpage/portfolio.html' %}
+		{% include 'mainpage/calltoaction.html' %}
+		{% include 'mainpage/contact.html' %}
     {% endblock content %}
 
 	{% include 'footer.html' %}
