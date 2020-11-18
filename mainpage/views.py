@@ -13,7 +13,8 @@ from .models import Project
 
 class ProjectListAndFormView(SuccessMessageMixin, ListView, FormView):
     model = Project # data from database
-    template_name = 'mainpage/main.html'
+    # template_name = 'mainpage/main.html'
+    template_name = 'base.html'
     context_object_name = 'list_projects' # name of the var in html template
     queryset = Project.objects.all().order_by("-pub_date")#  list of all projects
     object_list = None
