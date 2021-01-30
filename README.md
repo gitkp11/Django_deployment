@@ -3,7 +3,7 @@
 This is a Django-based personal website I created for myself. The current theme from my previous portfolio website.
 I am releasing the full source code for the site so that others may benefit from the code I've written.
 Live example is [here](https://gitkp11.azurewebsites.net)
-
+Website credited to [vlad moroshan](https://www.linkedin.com/in/vlad-moroshan-266229129/?trk=nav_responsive_tab_profile)
 # Installation and Running
 
 * Run the command `git clone <repository-url>` to have this repository locally in your computer
